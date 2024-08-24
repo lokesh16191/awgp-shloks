@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSML Code Display with Copy Feature</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+	 <script>
+        function copyCode(tag) 
+		{
+            const code = document.getElementById(tag).innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('SSML code copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy code: ', err);
+            });
+        }
+    </script>
+
+</head>
+<body>
+
+    <h2>Gayatri Mantra SSML Code</h2>
+
+    <pre id="1">
+	&lt;speak&gt;
+	  ॐ &lt;phoneme alphabet="ipa" ph="ˈbʱʊːr"&gt;भूर्भुवः&lt;/phoneme&gt; &lt;phoneme alphabet="ipa" ph="ˈsʋəːʃ"&gt;स्वः&lt;/phoneme&gt;। 
+	  &lt;phoneme alphabet="ipa" ph="ˈtʃɑːtʃʊɾəʋərɪəːnə̃"&gt;तत्सवितुर्वरेण्यं&lt;/phoneme&gt;। 
+	  &lt;phoneme alphabet="ipa" ph="bʱəɾɡoː dɪˈvɑːsjə"&gt;भर्गो देवस्य&lt;/phoneme&gt; &lt;phoneme alphabet="ipa" ph="ˈdʱɪmɑːɦɪ"&gt;धीमहि&lt;/phoneme&gt;। 
+	  &lt;phoneme alphabet="ipa" ph="ˈdʱɪːjoː joː nəːˈɕə djoːˈtəjɑːt"&gt;धियो यो नः प्रचोदयात्&lt;/phoneme&gt;।
+	&lt;/speak&gt;
+    </pre>
+
+    <button onclick="copyCode('1')">Copy Code</button>
+	<audio controls>
+	  <source src="audio/gayatri-mantra.mp3" type="audio/ogg">
+	  Your browser does not support the audio tag.
+	</audio>
+   
+</body>
+</html>
